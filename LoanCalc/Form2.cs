@@ -21,7 +21,7 @@ namespace LoanCalc
             this.MaximizeBox = false; // 禁用最大化按鈕
             this.MaximumSize = new Size(1280, 720); // 設定最大視窗大小為 1280x720
             this.MinimumSize = new Size(1280, 720); // 設定最小視窗大小為 1280x720
-            this.Text = "本息攤還";
+            this.Text = "本息攤還"; // set title
         }
 
         private void label1_Click(object sender, EventArgs e) { }
@@ -31,18 +31,50 @@ namespace LoanCalc
             textBox1.Clear();
             textBox2.Clear();
             textBox3.Clear();
-            dataGridView1.Rows.Clear();
+            dataGridView1.Rows.Clear(); // clears all data
         }
 
         private void dataGridView1_CellContentClick_1(object sender, DataGridViewCellEventArgs e) { }
 
         private void button2_Click(object sender, EventArgs e) { }
 
-        private void textBox3_TextChanged(object sender, EventArgs e) { }
-
-        private void textBox1_TextChanged_1(object sender, EventArgs e)
+        private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
         {
-            
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
+            {
+                e.Handled = true;
+            }
+            //只能輸入數字和小數點
+            if ((e.KeyChar == '.') && ((sender as System.Windows.Forms.TextBox).Text.IndexOf('.') > -1))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void textBox2_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
+            {
+                e.Handled = true;
+            }
+            //只能輸入數字和小數點
+            if ((e.KeyChar == '.') && ((sender as System.Windows.Forms.TextBox).Text.IndexOf('.') > -1))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void textBox3_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
+            {
+                e.Handled = true;
+            }
+            //只能輸入數字和小數點
+            if ((e.KeyChar == '.') && ((sender as System.Windows.Forms.TextBox).Text.IndexOf('.') > -1))
+            {
+                e.Handled = true;
+            }
         }
     }
 }
