@@ -34,15 +34,21 @@ namespace LoanCalc
             dataGridView1.Rows.Clear(); // clears all data
         } //clear button
 
-        private void dataGridView1_CellContentClick_1(object sender, DataGridViewCellEventArgs e) { }
-
-        private void button2_Click(object sender, EventArgs e) { } //enter button
+        private void button2_Click(object sender, EventArgs e)
+        {
+            dataGridView1.Rows.Clear(); // clears all data before calculation
+            double IR = ((Math.Pow(1 + double.Parse(textBox3.Text) / 1200, double.Parse(textBox2.Text) * 12)) * double.Parse(textBox3.Text) / 1200) / (Math.Pow(1 + double.Parse(textBox3.Text) / 1200, double.Parse(textBox2.Text) * 12) - 1);
+            for (int i = 1; i <= int.Parse(textBox2.Text) * 12; i++)
+            {
+                dataGridView1.Rows.Add(Convert.ToString(i));
+            }
+        } //enter button
 
         private void checkDigit(object sender, KeyPressEventArgs e)
         {
             if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
             {
-                e.Handled =  true;
+                e.Handled = true;
             }
             // only numbers can be entered
             if ((e.KeyChar == '.') && ((sender as System.Windows.Forms.TextBox).Text.IndexOf('.') > -1))
