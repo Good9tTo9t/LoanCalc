@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace LoanCalc
 {
@@ -23,35 +24,25 @@ namespace LoanCalc
             this.Text = "本息攤還";
         }
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e) { }
-
         private void label1_Click(object sender, EventArgs e) { }
-
-        private void textBox1_TextChanged(object sender, EventArgs e) { }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            numericUpDown1.Value = 0;
-            numericUpDown2.Value = 0;
-            numericUpDown3.Value = 0;
+            textBox1.Clear();
+            textBox2.Clear();
+            textBox3.Clear();
             dataGridView1.Rows.Clear();
         }
 
-        private void dataGridView1_CellContentClick_1(object sender, DataGridViewCellEventArgs e){ }
+        private void dataGridView1_CellContentClick_1(object sender, DataGridViewCellEventArgs e) { }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void button2_Click(object sender, EventArgs e) { }
+
+        private void textBox3_TextChanged(object sender, EventArgs e) { }
+
+        private void textBox1_TextChanged_1(object sender, EventArgs e)
         {
             
-        }
-
-        private void textBox3_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void numericUpDown1_ValueChanged(object sender, EventArgs e)
-        {
-
         }
     }
 }

@@ -34,6 +34,6 @@ namespace LoanCalc
             f3.ShowDialog(); //本金平均視窗
         }
 
-        private void label1_Click(object sender, EventArgs e){}
+        private void label1_Click(object sender, EventArgs e) {}
     }
 }
