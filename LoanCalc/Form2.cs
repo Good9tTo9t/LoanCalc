@@ -36,11 +36,19 @@ namespace LoanCalc
 
         private void button2_Click(object sender, EventArgs e)
         {
-            dataGridView1.Rows.Clear(); // clears all data before calculation
-            double IR = ((Math.Pow(1 + double.Parse(textBox3.Text) / 1200, double.Parse(textBox2.Text) * 12)) * double.Parse(textBox3.Text) / 1200) / (Math.Pow(1 + double.Parse(textBox3.Text) / 1200, double.Parse(textBox2.Text) * 12) - 1);
-            for (int i = 1; i <= int.Parse(textBox2.Text) * 12; i++)
+            if (NullandZeroCheck(textBox1.Text) || NullandZeroCheck(textBox2.Text) || NullandZeroCheck(textBox3.Text))
             {
-                dataGridView1.Rows.Add(Convert.ToString(i));
+                MessageBox.Show("您輸入的數字有誤。", "Error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            } 
+            // if one or more of the textboxes is empty or null then throw an error
+            else
+            {
+                dataGridView1.Rows.Clear(); // clears all data before calculation
+                double IR = ((Math.Pow(1 + double.Parse(textBox3.Text) / 1200, double.Parse(textBox2.Text) * 12)) * double.Parse(textBox3.Text) / 1200) / (Math.Pow(1 + double.Parse(textBox3.Text) / 1200, double.Parse(textBox2.Text) * 12) - 1);
+                for (int i = 1; i <= int.Parse(textBox2.Text) * 12; i++)
+                {
+                    dataGridView1.Rows.Add(Convert.ToString(i));
+                }
             }
         } //enter button
 
@@ -56,6 +64,18 @@ namespace LoanCalc
                 e.Handled = true;
             }
             // only the first decimal point can be entered
+        }
+
+        private bool NullandZeroCheck(string txt)
+        {
+            if( String.IsNullOrEmpty(txt) || Int32.Parse(txt) == 0)
+            {
+                return true;
+            } 
+            else
+            {
+                return false;
+            }
         }
     }
 }
