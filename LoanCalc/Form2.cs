@@ -45,9 +45,14 @@ namespace LoanCalc
             {
                 dataGridView1.Rows.Clear(); // clears all data before calculation
                 double IR = ((Math.Pow(1 + double.Parse(textBox3.Text) / 1200, double.Parse(textBox2.Text) * 12)) * double.Parse(textBox3.Text) / 1200) / (Math.Pow(1 + double.Parse(textBox3.Text) / 1200, double.Parse(textBox2.Text) * 12) - 1);
+                double principal = double.Parse(textBox1.Text);
+
+                double paymentPerMonth = principal * IR;
+
                 for (int i = 1; i <= int.Parse(textBox2.Text) * 12; i++)
                 {
-                    dataGridView1.Rows.Add(Convert.ToString(i));
+                    if(i>1) principal -= paymentPerMonth;
+                    dataGridView1.Rows.Add( Convert.ToString(i), principal * IR, 0, Math.Round(paymentPerMonth, 0) );
                 }
             }
         } //enter button
@@ -68,7 +73,7 @@ namespace LoanCalc
 
         private bool NullandZeroCheck(string txt)
         {
-            if( String.IsNullOrEmpty(txt) || Int32.Parse(txt) == 0)
+            if( String.IsNullOrEmpty(txt) || !double.TryParse(txt, out _) || double.Parse(txt) == 0)
             {
                 return true;
             } 
