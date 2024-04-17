@@ -38,13 +38,13 @@ namespace LoanCalc
             button1 = new System.Windows.Forms.Button();
             button2 = new System.Windows.Forms.Button();
             dataGridView1 = new System.Windows.Forms.DataGridView();
+            textBox1 = new System.Windows.Forms.TextBox();
+            textBox2 = new System.Windows.Forms.TextBox();
+            textBox3 = new System.Windows.Forms.TextBox();
             month = new System.Windows.Forms.DataGridViewTextBoxColumn();
             principal = new System.Windows.Forms.DataGridViewTextBoxColumn();
             intrest = new System.Windows.Forms.DataGridViewTextBoxColumn();
             total = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            textBox1 = new System.Windows.Forms.TextBox();
-            textBox2 = new System.Windows.Forms.TextBox();
-            textBox3 = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
@@ -88,6 +88,7 @@ namespace LoanCalc
             dataGridView1.AllowUserToAddRows = false;
             dataGridView1.AllowUserToDeleteRows = false;
             dataGridView1.AllowUserToResizeRows = false;
+            dataGridView1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft JhengHei UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
@@ -125,37 +126,6 @@ namespace LoanCalc
             dataGridView1.Size = new System.Drawing.Size(1061, 311);
             dataGridView1.TabIndex = 9;
             // 
-            // month
-            // 
-            month.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("微軟正黑體", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            month.DefaultCellStyle = dataGridViewCellStyle2;
-            month.HeaderText = "月";
-            month.Name = "month";
-            month.ReadOnly = true;
-            month.Width = 161;
-            // 
-            // principal
-            // 
-            principal.HeaderText = "應還本金";
-            principal.Name = "principal";
-            principal.ReadOnly = true;
-            principal.Width = 300;
-            // 
-            // intrest
-            // 
-            intrest.HeaderText = "應還利息";
-            intrest.Name = "intrest";
-            intrest.ReadOnly = true;
-            intrest.Width = 300;
-            // 
-            // total
-            // 
-            total.HeaderText = "應還金額";
-            total.Name = "total";
-            total.ReadOnly = true;
-            total.Width = 300;
-            // 
             // textBox1
             // 
             textBox1.Font = new System.Drawing.Font("Microsoft JhengHei UI", 50.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
@@ -182,6 +152,37 @@ namespace LoanCalc
             textBox3.Size = new System.Drawing.Size(376, 93);
             textBox3.TabIndex = 12;
             textBox3.KeyPress += checkDigit;
+            // 
+            // month
+            // 
+            month.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("微軟正黑體", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            month.DefaultCellStyle = dataGridViewCellStyle2;
+            month.HeaderText = "月";
+            month.Name = "month";
+            month.ReadOnly = true;
+            month.Width = 130;
+            // 
+            // principal
+            // 
+            principal.HeaderText = "應還本金";
+            principal.Name = "principal";
+            principal.ReadOnly = true;
+            principal.Width = 300;
+            // 
+            // intrest
+            // 
+            intrest.HeaderText = "應還利息";
+            intrest.Name = "intrest";
+            intrest.ReadOnly = true;
+            intrest.Width = 300;
+            // 
+            // total
+            // 
+            total.HeaderText = "應還金額";
+            total.Name = "total";
+            total.ReadOnly = true;
+            total.Width = 300;
             // 
             // Form2
             // 

@@ -48,12 +48,21 @@ namespace LoanCalc
                 double principal = double.Parse(textBox1.Text);
 
                 double paymentPerMonth = principal * IR;
+                double remP = double.Parse(textBox1.Text);
+                double Mtot=0, Itot=0, Ptot=0;
 
-                for (int i = 1; i <= int.Parse(textBox2.Text) * 12; i++)
+                for (int i = 1; i <= Math.Round(double.Parse(textBox2.Text) * 12); i++)
                 {
-                    if(i>1) principal -= paymentPerMonth;
-                    dataGridView1.Rows.Add( Convert.ToString(i), principal * IR, 0, Math.Round(paymentPerMonth, 0) );
+                    dataGridView1.Rows.Add( Convert.ToString(i), Math.Round(paymentPerMonth - (remP * (double.Parse(textBox3.Text) / 1200))), Math.Round(remP * (double.Parse(textBox3.Text) / 1200)), Math.Round(paymentPerMonth, 0) );
+
+                    Mtot += paymentPerMonth - (remP * (double.Parse(textBox3.Text) / 1200));
+                    Itot += remP * (double.Parse(textBox3.Text) / 1200);
+                    Ptot += paymentPerMonth;
+
+                    remP -= (paymentPerMonth - (remP * (double.Parse(textBox3.Text) / 1200)));
                 }
+
+                dataGridView1.Rows.Add("Total", Math.Round(Mtot), Math.Round(Itot), Math.Round(Ptot));
             }
         } //enter button
 
