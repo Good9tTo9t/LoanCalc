@@ -22,7 +22,7 @@ namespace LoanCalc
             this.MinimumSize = new Size(1280, 720); // 設定最小視窗大小為 1280x720
         }
 
-
+        //testing git func
 
         private void checkDigit(object sender, KeyPressEventArgs e)
         {
