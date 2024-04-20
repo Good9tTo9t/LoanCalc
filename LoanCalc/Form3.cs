@@ -21,5 +21,33 @@ namespace LoanCalc
             this.MaximumSize = new Size(1280, 720); // 設定最大視窗大小為 1280x720
             this.MinimumSize = new Size(1280, 720); // 設定最小視窗大小為 1280x720
         }
+
+
+
+        private void checkDigit(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
+            {
+                e.Handled = true;
+            }
+            // only numbers can be entered
+            if ((e.KeyChar == '.') && ((sender as System.Windows.Forms.TextBox).Text.IndexOf('.') > -1))
+            {
+                e.Handled = true;
+            }
+            // only the first decimal point can be entered
+        }
+
+        private bool NullandZeroCheck(string txt)
+        {
+            if (String.IsNullOrEmpty(txt) || !double.TryParse(txt, out _) || double.Parse(txt) == 0)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
     }
 }
