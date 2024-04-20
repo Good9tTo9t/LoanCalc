@@ -1,13 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Reflection;
-using System.Text;
 using System.Windows.Forms;
-using System.Xml.Linq;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace LoanCalc
 {
@@ -39,7 +32,7 @@ namespace LoanCalc
             if (NullandZeroCheck(textBox1.Text) || NullandZeroCheck(textBox2.Text) || NullandZeroCheck(textBox3.Text))
             {
                 MessageBox.Show("您輸入的數字有誤。", "Error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-            } 
+            }
             // if one or more of the textboxes is empty or null then throw an error
             else
             {
@@ -49,17 +42,17 @@ namespace LoanCalc
 
                 double paymentPerMonth = principal * IR;
                 double remP = double.Parse(textBox1.Text);
-                double Mtot=0, Itot=0, Ptot=0;
+                double Mtot = 0, Itot = 0, Ptot = 0;
 
                 for (int i = 1; i <= Math.Round(double.Parse(textBox2.Text) * 12); i++)
                 {
-                    dataGridView1.Rows.Add( Convert.ToString(i), Math.Round(paymentPerMonth - (remP * (double.Parse(textBox3.Text) / 1200))), Math.Round(remP * (double.Parse(textBox3.Text) / 1200)), Math.Round(paymentPerMonth, 0) );
+                    dataGridView1.Rows.Add(Convert.ToString(i), Math.Round(paymentPerMonth - (remP * (double.Parse(textBox3.Text) / 1200))), Math.Round(remP * (double.Parse(textBox3.Text) / 1200)), Math.Round(paymentPerMonth, 0));
 
                     Mtot += paymentPerMonth - (remP * (double.Parse(textBox3.Text) / 1200));
                     Itot += remP * (double.Parse(textBox3.Text) / 1200);
                     Ptot += paymentPerMonth;
 
-                    remP -= (paymentPerMonth - (remP * (double.Parse(textBox3.Text) / 1200)));
+                    remP -= paymentPerMonth - (remP * (double.Parse(textBox3.Text) / 1200));
                 }
 
                 dataGridView1.Rows.Add("Total", Math.Round(Mtot), Math.Round(Itot), Math.Round(Ptot));
@@ -82,10 +75,10 @@ namespace LoanCalc
 
         private bool NullandZeroCheck(string txt)
         {
-            if( String.IsNullOrEmpty(txt) || !double.TryParse(txt, out _) || double.Parse(txt) == 0)
+            if (String.IsNullOrEmpty(txt) || !double.TryParse(txt, out _) || double.Parse(txt) == 0)
             {
                 return true;
-            } 
+            }
             else
             {
                 return false;
