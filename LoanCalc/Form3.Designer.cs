@@ -34,27 +34,27 @@ namespace LoanCalc
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            dataGridView1 = new System.Windows.Forms.DataGridView();
-            month = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            principal = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            intrest = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            total = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            textBox3 = new System.Windows.Forms.TextBox();
-            textBox2 = new System.Windows.Forms.TextBox();
-            textBox1 = new System.Windows.Forms.TextBox();
-            button2 = new System.Windows.Forms.Button();
-            button1 = new System.Windows.Forms.Button();
-            label1 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
-            SuspendLayout();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.month = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.principal = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.intrest = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.total = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.SuspendLayout();
             // 
             // dataGridView1
             // 
-            dataGridView1.AllowDrop = true;
-            dataGridView1.AllowUserToAddRows = false;
-            dataGridView1.AllowUserToDeleteRows = false;
-            dataGridView1.AllowUserToResizeRows = false;
-            dataGridView1.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.dataGridView1.AllowDrop = true;
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.AllowUserToResizeRows = false;
+            this.dataGridView1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft JhengHei UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
@@ -62,10 +62,14 @@ namespace LoanCalc
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            dataGridView1.ColumnHeadersHeight = 40;
-            dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] { month, principal, intrest, total });
+            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dataGridView1.ColumnHeadersHeight = 40;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.month,
+            this.principal,
+            this.intrest,
+            this.total});
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft JhengHei UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
@@ -73,10 +77,10 @@ namespace LoanCalc
             dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            dataGridView1.DefaultCellStyle = dataGridViewCellStyle3;
-            dataGridView1.Location = new System.Drawing.Point(102, 341);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.ReadOnly = true;
+            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle3;
+            this.dataGridView1.Location = new System.Drawing.Point(102, 341);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
             dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft JhengHei UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
@@ -84,124 +88,121 @@ namespace LoanCalc
             dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
-            dataGridView1.RowHeadersVisible = false;
+            this.dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            this.dataGridView1.RowHeadersVisible = false;
             dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle5;
-            dataGridView1.RowTemplate.Height = 25;
-            dataGridView1.Size = new System.Drawing.Size(1061, 311);
-            dataGridView1.TabIndex = 16;
+            this.dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle5;
+            this.dataGridView1.RowTemplate.Height = 25;
+            this.dataGridView1.Size = new System.Drawing.Size(1061, 311);
+            this.dataGridView1.TabIndex = 16;
             // 
             // month
             // 
-            month.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.month.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("微軟正黑體", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            month.DefaultCellStyle = dataGridViewCellStyle2;
-            month.HeaderText = "月";
-            month.Name = "month";
-            month.ReadOnly = true;
-            month.Width = 130;
+            this.month.DefaultCellStyle = dataGridViewCellStyle2;
+            this.month.HeaderText = "月";
+            this.month.Name = "month";
+            this.month.ReadOnly = true;
+            this.month.Width = 130;
             // 
             // principal
             // 
-            principal.HeaderText = "應還本金";
-            principal.Name = "principal";
-            principal.ReadOnly = true;
-            principal.Width = 300;
+            this.principal.HeaderText = "應還本金";
+            this.principal.Name = "principal";
+            this.principal.ReadOnly = true;
+            this.principal.Width = 300;
             // 
             // intrest
             // 
-            intrest.HeaderText = "應還利息";
-            intrest.Name = "intrest";
-            intrest.ReadOnly = true;
-            intrest.Width = 300;
+            this.intrest.HeaderText = "應還利息";
+            this.intrest.Name = "intrest";
+            this.intrest.ReadOnly = true;
+            this.intrest.Width = 300;
             // 
             // total
             // 
-            total.HeaderText = "應還金額";
-            total.Name = "total";
-            total.ReadOnly = true;
-            total.Width = 300;
+            this.total.HeaderText = "應還金額";
+            this.total.Name = "total";
+            this.total.ReadOnly = true;
+            this.total.Width = 300;
             // 
             // textBox3
             // 
-            textBox3.Font = new System.Drawing.Font("Microsoft JhengHei UI", 50.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            textBox3.Location = new System.Drawing.Point(470, 227);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new System.Drawing.Size(376, 93);
-            textBox3.TabIndex = 19;
-            textBox3.KeyPress += checkDigit;
+            this.textBox3.Font = new System.Drawing.Font("Microsoft JhengHei UI", 50.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.textBox3.Location = new System.Drawing.Point(470, 227);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(376, 93);
+            this.textBox3.TabIndex = 19;
             // 
             // textBox2
             // 
-            textBox2.Font = new System.Drawing.Font("Microsoft JhengHei UI", 50.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            textBox2.Location = new System.Drawing.Point(470, 128);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new System.Drawing.Size(376, 93);
-            textBox2.TabIndex = 18;
-            textBox2.KeyPress += checkDigit;
+            this.textBox2.Font = new System.Drawing.Font("Microsoft JhengHei UI", 50.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.textBox2.Location = new System.Drawing.Point(470, 128);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(376, 93);
+            this.textBox2.TabIndex = 18;
             // 
             // textBox1
             // 
-            textBox1.Font = new System.Drawing.Font("Microsoft JhengHei UI", 50.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            textBox1.Location = new System.Drawing.Point(470, 29);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new System.Drawing.Size(376, 93);
-            textBox1.TabIndex = 17;
-            textBox1.KeyPress += checkDigit;
+            this.textBox1.Font = new System.Drawing.Font("Microsoft JhengHei UI", 50.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.textBox1.Location = new System.Drawing.Point(470, 29);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(376, 93);
+            this.textBox1.TabIndex = 17;
             // 
             // button2
             // 
-            button2.Font = new System.Drawing.Font("微軟正黑體", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            button2.Location = new System.Drawing.Point(864, 182);
-            button2.Name = "button2";
-            button2.Size = new System.Drawing.Size(299, 132);
-            button2.TabIndex = 15;
-            button2.Text = "Enter";
-            button2.UseVisualStyleBackColor = true;
-            button2.Click += button2_Click;
+            this.button2.Font = new System.Drawing.Font("微軟正黑體", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.button2.Location = new System.Drawing.Point(864, 182);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(299, 132);
+            this.button2.TabIndex = 15;
+            this.button2.Text = "Enter";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click_1);
             // 
             // button1
             // 
-            button1.Font = new System.Drawing.Font("微軟正黑體", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            button1.Location = new System.Drawing.Point(864, 35);
-            button1.Name = "button1";
-            button1.Size = new System.Drawing.Size(299, 132);
-            button1.TabIndex = 14;
-            button1.Text = "Clear";
-            button1.UseVisualStyleBackColor = true;
-            button1.Click += button1_Click;
+            this.button1.Font = new System.Drawing.Font("微軟正黑體", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.button1.Location = new System.Drawing.Point(864, 35);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(299, 132);
+            this.button1.TabIndex = 14;
+            this.button1.Text = "Clear";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // label1
             // 
-            label1.AutoSize = true;
-            label1.Font = new System.Drawing.Font("Microsoft JhengHei UI", 54F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            label1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            label1.Location = new System.Drawing.Point(102, 35);
-            label1.Name = "label1";
-            label1.Size = new System.Drawing.Size(399, 273);
-            label1.TabIndex = 13;
-            label1.Text = "貸款金額：\r\n貸款年數：\r\n年利率％：";
-            label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft JhengHei UI", 54F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.label1.Location = new System.Drawing.Point(102, 35);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(399, 273);
+            this.label1.TabIndex = 13;
+            this.label1.Text = "貸款金額：\r\n貸款年數：\r\n年利率％：";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // Form3
             // 
-            AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
-            AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            ClientSize = new System.Drawing.Size(1264, 681);
-            Controls.Add(dataGridView1);
-            Controls.Add(textBox3);
-            Controls.Add(textBox2);
-            Controls.Add(textBox1);
-            Controls.Add(button2);
-            Controls.Add(button1);
-            Controls.Add(label1);
-            Name = "Form3";
-            Text = "Form3";
-            Load += Form3_Load;
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
-            ResumeLayout(false);
-            PerformLayout();
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(1264, 681);
+            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.label1);
+            this.Name = "Form3";
+            this.Text = "Form3";
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
         }
 
         #endregion
