@@ -34,6 +34,7 @@ namespace LoanCalc
             }// if one or more of the textboxes is empty or null then throw an error
             else
             {
+                dataGridView1.Rows.Clear(); // clears all data before calculation
                 double remP = double.Parse(textBox1.Text);
                 double monthPayP = double.Parse(textBox1.Text) / (double.Parse(textBox2.Text) * 12);
                 double IR = double.Parse(textBox3.Text) / 1200;
