@@ -43,7 +43,7 @@ namespace LoanCalc
                 {
                     payI = remP * IR; // intrest
                     payM = monthPayP + payI; // sum of money payed
-                    
+
                     remP -= monthPayP; // calculate remaning principal
 
                     totP += monthPayP;
@@ -81,7 +81,5 @@ namespace LoanCalc
                 return false;
             }
         }
-
-
     }
 }
