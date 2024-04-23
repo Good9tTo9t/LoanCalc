@@ -16,7 +16,7 @@ namespace LoanCalc
             this.MaximizeBox = false; // 禁用最大化按鈕
             this.MaximumSize = new Size(1280, 720); // 設定最大視窗大小為 1280x720
             this.MinimumSize = new Size(1280, 720); // 設定最小視窗大小為 1280x720
-            this.Text = "本息攤還"; // set title
+            this.Text = "本金攤還"; // set title
         }
         private void button1_Click(object sender, EventArgs e)
         {
