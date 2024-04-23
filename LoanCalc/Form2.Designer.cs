@@ -164,6 +164,7 @@ namespace LoanCalc
             textBox1.Name = "textBox1";
             textBox1.Size = new System.Drawing.Size(376, 93);
             textBox1.TabIndex = 10;
+            textBox1.KeyPress += checkDigit;
             // 
             // textBox2
             // 
@@ -172,6 +173,7 @@ namespace LoanCalc
             textBox2.Name = "textBox2";
             textBox2.Size = new System.Drawing.Size(376, 93);
             textBox2.TabIndex = 11;
+            textBox2.KeyPress += checkDigit;
             // 
             // textBox3
             // 
@@ -180,6 +182,7 @@ namespace LoanCalc
             textBox3.Name = "textBox3";
             textBox3.Size = new System.Drawing.Size(376, 93);
             textBox3.TabIndex = 12;
+            textBox3.KeyPress += checkDigit;
             // 
             // Form2
             // 
